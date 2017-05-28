@@ -96,6 +96,7 @@ img {
 .etapas{
     max-width: 1000px;
     margin: auto;
+    margin-top: 10px;
 }
 
 .etapast {
@@ -104,10 +105,63 @@ img {
 	float: left;
 	border: 6px solid black;
 	margin: 10px;
-	font-size: 300%;
-	text-align: center;
-	vertical-align: middle;
-	line-height: 200px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.etapast span{
+    display: block;
+}
+
+.etapast img{
+    position: relative;
+    float: left;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.etapast:hover {
+    /*width: 475px;
+    height: 225px;
+    margin-top: -8px;
+    margin-left: -2px;*/
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+    -moz-box-shadow: 0 0 50px black;
+    -webkit-box-shadow: 0 0 50px black;
+    box-shadow: 0 0 50px black;
+    opacity: 1;
+}
+
+/*@-webkit-keyframes swing {
+    50% {
+        -webkit-transform: translate(0,-5px);
+        transform: translate(0,-5px);
+    }
+}
+
+@keyframes swing {
+    50% {
+        -webkit-transform: translate(0,-5px);
+        transform: translate(0,-5px);
+    }
+}
+
+.etapast:hover img{
+    -webkit-animation: swing 0.2s ease;
+    animation: swing 0.2s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}*/
+
+.etapasc{
+    font-size: 300%;
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #grailsLogo a {
