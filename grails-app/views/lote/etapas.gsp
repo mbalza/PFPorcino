@@ -11,16 +11,16 @@
 
 <div class="etapas">
     <div class="etapast">
-        <a class="etapasc" href="${createLink(uri: '/lote/nacimiento')}"> <asset:image src="ICONS/iconitos-20.png" alt="Grails"/> <span>Nacimiento</span></a>
+        <a class="etapasc" href="${createLink(uri: '/lote/nacimiento')}"> <asset:image src="ICONS/1_nacimiento.png" alt="Grails"/> <span>NACIMIENTO</span></a>
     </div>
     <div class="etapast">
-        <a class="etapasc" href="${createLink(uri: '/lote/destete')}"> <asset:image src="ICONS/iconitos-21.png" alt="Grails"/> <span>Destete</span></a>
+        <a class="etapasc" href="${createLink(uri: '/lote/destete')}"> <asset:image src="ICONS/2_destete.png" alt="Grails"/> <span>DESTETE</span></a>
     </div>
     <div class="etapast">
-        <a class="etapasc" href="${createLink(uri: '/lote/preCeba')}"> <asset:image src="ICONS/iconitos-22.png" alt="Grails"/> <span >PreCeba</span></a>
+        <a class="etapasc" href="${createLink(uri: '/lote/preCeba')}"> <asset:image src="ICONS/3_pre_ceba.png" alt="Grails"/> <span >PRECEBA</span></a>
     </div>
     <div class="etapast">
-        <a class="etapasc" href="${createLink(uri: '/lote/salida')}"> <asset:image src="ICONS/iconitos-23.png" alt="Grails"/> <span>Salida</span></a>
+        <a class="etapasc" href="${createLink(uri: '/lote/salida')}"> <asset:image src="ICONS/4_salida.png" alt="Grails"/> <span>SALIDA</span></a>
     </div>
 </div>
 

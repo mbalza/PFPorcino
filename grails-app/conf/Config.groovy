@@ -124,6 +124,8 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'seguridad.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'seguridad.UserRole'
 grails.plugin.springsecurity.authority.className = 'seguridad.Role'
 grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.successHandler.alwaysUseDefault = true
+grails.plugin.springsecurityUtils.successHandler.defaultTargetUrl = '/inicio'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	'/':                              ['permitAll'],
 	'/index':                         ['permitAll'],

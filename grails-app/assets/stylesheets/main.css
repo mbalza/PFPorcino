@@ -1,7 +1,8 @@
 /* FONT STACK */
 body,
 input, select, textarea {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Gill Sans MT Condensed","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    font-size: 30px !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,7 +41,7 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
-	max-width: 1600px;
+	max-width: 1550px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #dad7dd;
 	-webkit-box-shadow: 0 0 0.3em #dad7dd;
@@ -69,18 +70,28 @@ body {
 }
 
 a:link, a:visited, a:hover {
-	color: #3eb890;
+	color: #41393A;
+}
+
+a:hover, a:focus {
+    color: rgba(154,41,45,0.6)!important;
+    text-decoration: none !important;
 }
 
 a:hover, a:active {
 	outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
 }
 
+.rayanav{
+    border-right: 1px solid #CCCCCC;
+}
+
 h1 {
 	color: #dad7dd;
 	font-weight: normal;
-	font-size: 1.25em;
+	font-size: 1.25em !important;
 	margin: 0.8em 0 0.3em 0;
+    text-transform: uppercase;
 }
 
 ul {
@@ -93,6 +104,10 @@ img {
 
 /* GENERAL */
 
+.box{
+
+}
+
 .etapas{
     max-width: 1000px;
     margin: auto;
@@ -103,13 +118,16 @@ img {
 	width: 450px;
 	height: 200px;
 	float: left;
-	border: 6px solid black;
+	border: 3px solid rgba(155,155,155,0.6);
 	margin: 10px;
     margin-bottom: 20px;
     opacity: 0.6;
+    border-radius: 12px;
 }
 
 .etapast span{
+    position: relative;
+    top: -20px;
     display: block;
 }
 
@@ -156,17 +174,18 @@ img {
 }*/
 
 .etapasc{
-    font-size: 300%;
+    font-size: 2.5em;
     position: relative;
     float: left;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 20px;
 }
 
 #grailsLogo a {
 	display: inline-block;
-	margin: 1em;
+	margin: 0px 0.3em 0.3em 0.3em;
 }
 
 .content {
@@ -213,13 +232,23 @@ img {
 
 /* TOP NAVIGATION MENU */
 /* Add a black background color to the top navigation */
+.loginlogo{
+    display: block;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
 .topnav {
     background: #ffffff;
-    background: -moz-linear-gradient(top,  #ffffff 1%, #bebdc1 100%);
-    background: -webkit-linear-gradient(top,  #ffffff 1%,#bebdc1 100%);
-    background: linear-gradient(to bottom,  #ffffff 1%,#bebdc1 100%);
+    background: -moz-linear-gradient(top,  #ffffff 1%, rgba(190,189,193,0.3) 100%);
+    background: -webkit-linear-gradient(top,  #ffffff 1%,rgba(190,189,193,0.3) 100%);
+    background: linear-gradient(to bottom,  #ffffff 1%,rgba(190,189,193,0.3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bebdc1',GradientType=0 );
     overflow: hidden;
+}
+
+.imgc{
+    vertical-align: text-top;
 }
 
 /* Style the links inside the navigation bar */
@@ -230,8 +259,8 @@ img {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 20px;
-    margin-top: 35px;
+    font-size: 35px;
+    margin-top: 0.3em;
 }
 
 /* Change the color of links on hover */
@@ -397,7 +426,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .required-indicator {
-	color: #48802C;
+	color: rgba(154,41,45,0.6);
 	display: inline-block;
 	font-weight: bold;
 	margin-left: 0.3em;
@@ -595,7 +624,7 @@ th.desc a {
 }
 
 th:hover, tr:hover {
-	background: #E1F2B6;
+	background: rgba(250,187,169,0.2);
 }
 
 /* PAGINATION */

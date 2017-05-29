@@ -20,6 +20,9 @@ function agregarCerdos() {
                     success: function (dato) {
                         console.log(dato);
                         if(dato.status == "OK"){
+                            document.getElementById("idCerdo").value = "";
+                            document.getElementById("peso").value = "";
+                            document.getElementById("estado").value = "Vivo";
                             jQuery("#tablaCerdos").html(dato.results);
                         }else{
                             alert(dato.results);

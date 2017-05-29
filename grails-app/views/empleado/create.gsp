@@ -14,7 +14,7 @@
 			</ul>
 		</div>--}%
 		<div id="create-empleado" class="content scaffold-create" role="main">
-			<h1>Agregar Empleado</h1>
+			<h1>AGREGAR EMPLEADO</h1>
 			<g:if test="${flash.error}">
 				<div class="errors mio" role="status">${flash.error}</div>
 			</g:if>
@@ -33,7 +33,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:submitButton name="create" class="save" value="Agregar" />
 				</fieldset>
 			</g:form>
 		</div>

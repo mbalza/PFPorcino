@@ -19,16 +19,28 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-    <div class="topnav" id="myTopnav">
-        <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-        <a href="${createLink(uri: '/alimentacion/create')}"> <asset:image src="ICONS/iconitos-02.png" /> Alimentación</a>
-        <a href="${createLink(uri: '/lote/etapas')}"> <asset:image src="ICONS/iconitos-03.png" /> Etapas</a>
-        <a href="${createLink(uri: '/vacunaLote/create')}"> <asset:image src="ICONS/iconitos-04.png" /> Vacunas</a>
-        <a href="${createLink(uri: '/madre/create')}"> <asset:image src="ICONS/iconitos-05.png" /> Madres</a>
-        <a href="${createLink(uri: '/padre/create')}"> <asset:image src="ICONS/iconitos-05.png" /> Padres</a>
-        <a href="${createLink(uri: '/padre/create')}"> <asset:image src="ICONS/iconitos-19.png" /> Base de datos</a>
-        <g:remoteLink controller="logout" method="post" onSuccess="location.reload()"> <asset:image src="ICONS/iconitos-17.png" /> Log Out</g:remoteLink>
-    </div>
+    <sec:ifLoggedIn>
+        <div class="topnav" id="myTopnav">
+            <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/inicio')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
+            %{--<a href="${createLink(uri: '/alimentacion/create')}"> <asset:image src="ICONS/Artboard 2 copy.png" /> Alimentación</a>
+            <a href="${createLink(uri: '/lote/etapas')}"> <asset:image src="ICONS/Artboard 2 copy 2.png" /> Etapas</a>
+            <a href="${createLink(uri: '/vacunaLote/create')}"> <asset:image src="ICONS/Artboard 2 copy 3.png" /> Vacunas</a>
+            <a href="${createLink(uri: '/madre/create')}"> <asset:image src="ICONS/Artboard 2 copy 5.png" /> Madres</a>
+            <a href="${createLink(uri: '/padre/create')}"> <asset:image src="ICONS/Artboard 2 copy 4.png" /> Padres</a>
+            <a href="${createLink(uri: '/padre/create')}"> <asset:image src="ICONS/Artboard 2 copy 13.png" /> Base de datos</a>
+            <g:remoteLink controller="logout" method="post" onSuccess="location.reload()"> <asset:image src="ICONS/Artboard 2 copy 9.png" /> Log Out</g:remoteLink>--}%
+            <a class="rayanav" href="${createLink(uri: '/alimentacion/create')}"> <asset:image class="imgc" src="ICONS/5_alimentacion.png" /> ALIMENTACIÓN</a>
+            <a class="rayanav" href="${createLink(uri: '/lote/etapas')}"> <asset:image class="imgc" src="ICONS/6_etapas.png" /> ETAPAS</a>
+            <a class="rayanav" href="${createLink(uri: '/vacunaLote/create')}"> <asset:image class="imgc" src="ICONS/7_vacunas.png" /> VACUNAS</a>
+            <a class="rayanav" href="${createLink(uri: '/madre/create')}"> <asset:image class="imgc" src="ICONS/9_madre.png" /> MADRES</a>
+            <a class="rayanav" href="${createLink(uri: '/padre/create')}"> <asset:image class="imgc" src="ICONS/8_padre.png" /> PADRES</a>
+            <a class="rayanav" href="${createLink(uri: '/padre/create')}"> <asset:image class="imgc" src="ICONS/10_base_de_datos.png" /> BASE DE DATOS</a>
+            <g:remoteLink controller="logout" method="post" onSuccess="location.reload()"> <asset:image class="imgc" src="ICONS/12_logout.png" /> LOG OUT</g:remoteLink>
+        </div>
+    </sec:ifLoggedIn>
+    <sec:ifNotLoggedIn>
+        <asset:image class="loginlogo" src="grails_log.png"/>
+    </sec:ifNotLoggedIn>
 
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>

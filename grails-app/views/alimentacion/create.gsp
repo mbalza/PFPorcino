@@ -15,7 +15,7 @@
 			</ul>
 		</div>--}%
 		<div id="create-alimentacion" class="content scaffold-create" role="main">
-			<h1>Alimentación Lote</h1>
+			<h1>ALIMENTACIÓN LOTE</h1>
             <g:if test="${flash.error}">
                 <div class="errors mio" role="status">${flash.error}</div>
             </g:if>
@@ -23,7 +23,7 @@
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<g:hasErrors bean="${alimentacionInstance}">
-			<ul class="errors" role="alert">
+			<ul class="alert alert-danger" role="alert">
 				<g:eachError bean="${alimentacionInstance}" var="error">
 				<li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
 				</g:eachError>
