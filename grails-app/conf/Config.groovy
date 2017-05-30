@@ -143,13 +143,13 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/padre/create':                  ['ROLE_ADMIN'],
     '/padre/edit':                    ['ROLE_ADMIN'],
     '/padre/delete':                  ['ROLE_ADMIN'],
-    '/madre/**':                      ['permitAll'],
-    '/lote/**':                       ['permitAll'],
-    '/cerdo/**':                      ['permitAll'],
-    '/alimentacion/**':               ['permitAll'],
-    '/vacunaLote/**':                 ['permitAll'],
-    '/inicio/**':                 ['permitAll'],
-    '/baseDatos/**':                 ['permitAll']
+    '/madre/**':                      ['ROLE_USER', 'ROLE_ADMIN'],
+    '/lote/**':                       ['ROLE_USER', 'ROLE_ADMIN'],
+    '/cerdo/**':                      ['ROLE_USER', 'ROLE_ADMIN'],
+    '/alimentacion/**':               ['ROLE_USER', 'ROLE_ADMIN'],
+    '/vacunaLote/**':                 ['ROLE_USER', 'ROLE_ADMIN'],
+    '/inicio/**':                     ['ROLE_USER', 'ROLE_ADMIN'],
+    '/baseDatos/**':                  ['ROLE_USER', 'ROLE_ADMIN']
 
 ]
 

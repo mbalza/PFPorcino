@@ -2,7 +2,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: loteInstance, field: 'identificacion', 'error')} ">
     <label for="identificacion">
-        <g:message code="lote.identificacion.label" default="Identificacion" />
+        <g:message code="lote.identificacion.label" default="Identificación" />
 
     </label>
     <g:textField name="identificacion" value="${loteInstance?.identificacion}" />

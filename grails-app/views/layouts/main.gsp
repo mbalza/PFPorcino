@@ -19,6 +19,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
+
     <sec:ifLoggedIn>
         <div class="topnav" id="myTopnav">
             <div id="grailsLogo" role="banner"><a href="${createLink(uri: '/inicio')}"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
@@ -35,7 +36,7 @@
             <a class="rayanav" href="${createLink(uri: '/madre/create')}"> <asset:image class="imgc" src="ICONS/9_madre.png" /> MADRES</a>
             <a class="rayanav" href="${createLink(uri: '/padre/create')}"> <asset:image class="imgc" src="ICONS/8_padre.png" /> PADRES</a>
             <a class="rayanav" href="${createLink(uri: '/baseDatos/index')}"> <asset:image class="imgc" src="ICONS/10_base_de_datos.png" /> BASE DE DATOS</a>
-            <g:remoteLink controller="logout" method="post" onSuccess="location.reload()"> <asset:image class="imgc" src="ICONS/12_logout.png" /> LOG OUT</g:remoteLink>
+            <g:remoteLink controller="logout" method="post" onSuccess="${createLink(uri: '/inicio')}"> <asset:image class="imgc" src="ICONS/12_logout.png" /> LOG OUT</g:remoteLink>
         </div>
     </sec:ifLoggedIn>
     <sec:ifNotLoggedIn>

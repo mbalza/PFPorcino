@@ -39,13 +39,14 @@ html * {
 body {
 	background: #ffffff;
 	color: #333333;
-	margin: 0 auto;
 	max-width: 1550px;
+	margin: 0 auto;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #dad7dd;
 	-webkit-box-shadow: 0 0 0.3em #dad7dd;
 	        box-shadow: 0 0 0.3em #dad7dd;
 }
+
 
 #grailsLogo {
     background: #fcfcfc;
@@ -725,7 +726,7 @@ th:hover, tr:hover {
 .buttons .delete, .buttons .edit, .buttons .save {
 	background-position: 0.7em center;
 	background-repeat: no-repeat;
-	text-indent: 25px;
+	text-indent: 40px;
 }
 
 .ie6 .buttons input.delete, .ie6 .buttons input.edit, .ie6 .buttons input.save,

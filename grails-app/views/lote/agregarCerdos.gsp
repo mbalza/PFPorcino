@@ -18,13 +18,13 @@
 
 </head>
 <body>
-<a href="#create-lote" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+%{--<a href="#create-lote" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
 <div class="nav" role="navigation">
     <ul>
         <li><a class="home" href="${createLink(uri: '/')}"> Inicio </a></li>
         <li><g:link class="list" action="index"> Lotes </g:link></li>
     </ul>
-</div>
+</div>--}%
 <div id="create-lote" class="content scaffold-create" role="main">
     <h1>Nacimiento</h1>
 

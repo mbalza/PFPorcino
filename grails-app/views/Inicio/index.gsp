@@ -19,32 +19,17 @@
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <h1 class="centeredh1">Alimentación</h1>
-    
-    <div class="alert alert-warning" role="alert">
-        <asset:image src="ICONS/Artboard 2 copy 6.png" alt="Grails"/> <strong>Warning!</strong> Test <a href="#" class="alert-link">link</a>.
-    </div>
-
-    <div class="alert alert-info">
-        <strong>Info</strong> Alert body ...
-    </div>
 
     <div class="alert alert-success">
-        <strong>Success</strong> Alert body ...
+        <asset:image src="ICONS/iconos_wos-24.png" alt="Grails"/> No hay alertas.
     </div>
 
-    <div class="alert alert-danger">
-        <strong>Danger</strong> Alert body ...
-    </div>
-
-    <div class="alert alert-warning" role="alert">
-        <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
-    </div>
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <h1 class="centeredh1">Etapas</h1>
-    <div class="alert alert-warning" role="alert">
-        <asset:image src="ICONS/Artboard 2 copy 6.png" alt="Grails"/> <strong>Warning!</strong> Better check yourself, you're <a href="#" class="alert-link">not looking too good</a>.
+    <div class="alert alert-info">
+        <asset:image src="ICONS/18_infob.png" alt="Grails"/> Mañana el <strong>Lote 5</strong> pasa a <strong>Pre-Ceba</strong>
     </div>
 </div>
 
@@ -53,7 +38,12 @@
     <g:if test="${listaLoteVacunaFaltante && listaLoteVacunaFutura}">
         <g:each in="${listaLoteVacunaFaltante}" status="i" var="vacunaFaltante">
             <div class="alert alert-danger">
-                <strong>ATRASADA: ${vacunaFaltante.vacuna} - ${vacunaFaltante.numDiasPasados} días - ${vacunaFaltante.lote}</strong>
+                <g:if test="${vacunaFaltante.numDiasPasados == 1}">
+                    <asset:image src="ICONS/16_alertab.png" alt="Grails"/> <strong>ATRASADA: ${vacunaFaltante.vacuna}-${vacunaFaltante.numDiasPasados}día-${vacunaFaltante.lote}</strong>
+                </g:if>
+                <g:else>
+                    <asset:image src="ICONS/16_alertab.png" alt="Grails"/> <strong>ATRASADA: ${vacunaFaltante.vacuna}-${vacunaFaltante.numDiasPasados}días-${vacunaFaltante.lote}</strong>
+                </g:else>
             </div>
         </g:each>
 
