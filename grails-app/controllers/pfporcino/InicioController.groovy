@@ -17,7 +17,7 @@ class InicioController {
                     if (fueAplicada){
                         println("Vacuna "+vacuna.vacuna.Nombre+" fue aplicada al lote "+it.id)
                     }else{
-                        listaLoteVacunaFaltante.add([lote: it, vacuna: vacuna, numDiasPasados: dias-vacuna.numeroDias])
+                        listaLoteVacunaFaltante.add([lote: it, vacuna: vacuna.vacuna.Nombre, numDiasPasados: dias-vacuna.numeroDias])
                         println("Vacuna "+vacuna.vacuna.Nombre+" falta por aplicar al lote "+it.id)
                     }
                 }
@@ -28,17 +28,13 @@ class InicioController {
                     if (fueAplicada){
                         println("Vacuna "+vacuna.vacuna.Nombre+" fue aplicada al lote "+it.id)
                     }else{
-                        listaLoteVacunaFutura.add([lote: it, vacuna: vacuna, numDiasFaltantes: vacuna.numeroDias-dias])
+                        listaLoteVacunaFutura.add([lote: it, vacuna: vacuna.vacuna.Nombre, numDiasFaltantes: (vacuna.numeroDias-dias)])
                         println("Vacuna "+vacuna.vacuna.Nombre+" debe ser aplicada al lote "+it.id+" en "+(vacuna.numeroDias-dias)+" dias.")
                     }
                 }
             }
         }
 
-
-
-
-
-        [listaLoteVacunaFaltante: listaLoteVacunaFaltante]
+        [listaLoteVacunaFaltante: listaLoteVacunaFaltante.sort{- it.numDiasPasados}, listaLoteVacunaFutura: listaLoteVacunaFutura.sort{it.numDiasFaltantes}]
     }
 }

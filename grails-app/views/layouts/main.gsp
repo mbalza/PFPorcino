@@ -34,7 +34,7 @@
             <a class="rayanav" href="${createLink(uri: '/vacunaLote/create')}"> <asset:image class="imgc" src="ICONS/7_vacunas.png" /> VACUNAS</a>
             <a class="rayanav" href="${createLink(uri: '/madre/create')}"> <asset:image class="imgc" src="ICONS/9_madre.png" /> MADRES</a>
             <a class="rayanav" href="${createLink(uri: '/padre/create')}"> <asset:image class="imgc" src="ICONS/8_padre.png" /> PADRES</a>
-            <a class="rayanav" href="${createLink(uri: '/padre/create')}"> <asset:image class="imgc" src="ICONS/10_base_de_datos.png" /> BASE DE DATOS</a>
+            <a class="rayanav" href="${createLink(uri: '/baseDatos/index')}"> <asset:image class="imgc" src="ICONS/10_base_de_datos.png" /> BASE DE DATOS</a>
             <g:remoteLink controller="logout" method="post" onSuccess="location.reload()"> <asset:image class="imgc" src="ICONS/12_logout.png" /> LOG OUT</g:remoteLink>
         </div>
     </sec:ifLoggedIn>

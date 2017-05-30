@@ -18,7 +18,6 @@ html {
     background: linear-gradient(to bottom,  #ffffff 1%,#bebdc1 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bebdc1',GradientType=0 );
     background-repeat: no-repeat;
-	height: 100%;
 	/* change the box model to exclude the padding from the calculation of 100% height (IE8+) */
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
@@ -188,13 +187,20 @@ img {
 	margin: 0px 0.3em 0.3em 0.3em;
 }
 
-.content {
-}
-
 .content h1 {
 	border-bottom: 1px solid #CCCCCC;
 	margin: 0.8em 1em 0.3em;
 	padding: 0 0.25em;
+}
+
+.centeredH1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.centeredh1{
+    margin-top: 10px;
+    text-align: center;
 }
 
 .scaffold-list h1 {
@@ -236,6 +242,7 @@ img {
     display: block;
     margin: 0 auto;
     padding-top: 60px;
+	padding-bottom: 60px;
 }
 
 .topnav {
