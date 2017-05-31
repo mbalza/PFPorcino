@@ -35,16 +35,18 @@
     <br>
     <br>
     <br>
-    <h1 class="centeredh1">Indicador5</h1>
+    <br>
+
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
     <br>
-    <h1 class="centeredh1">Indicador6</h1>
     <br>
     <br>
     <br>
-    <h1 class="centeredh1">Indicador6</h1>
+    <br>
+    <br>
+    <br>
 </div>
 
 <div class="fechaBD">
