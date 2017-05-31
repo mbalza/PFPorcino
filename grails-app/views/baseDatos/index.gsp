@@ -20,17 +20,18 @@
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <h1 class="centeredh1">Cerdos por etapa </h1>
-    <h1 class="centeredh1">Nacimiento: ${ pfporcino.Etapa.findById(1).numeroCerdos}</h1>
-    <h1 class="centeredh1">Destete: ${ pfporcino.Etapa.findById(2).numeroCerdos}</h1>
-    <h1 class="centeredh1">Pre-ceba: ${ pfporcino.Etapa.findById(3).numeroCerdos}</h1>
-    <h1 class="centeredh1">Salida: ${ pfporcino.Etapa.findById(4).numeroCerdos}</h1>
+    <br>
+    <h1 class="centeredh1">Total cerdos: ${totalFinca}</h1>
+    <h1 class="centeredh1">Nacimiento: ${vivosNacimiento}</h1>
+    <h1 class="centeredh1">Destete: ${vivosDestete}</h1>
+    <h1 class="centeredh1">Pre-ceba: ${vivosPreceba}</h1>
+    <h1 class="centeredh1">Salida: ${vivosSalida}</h1>
 
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <h1 class="centeredh1">Indicador2</h1>
     <br>
+    <h1 class="centeredh1">Total Padres+Madres: ${totalPadres}</h1>
     <br>
     <br>
     <br>
@@ -38,13 +39,39 @@
 </div>
 
 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-    <h1 class="centeredh1">Indicador3</h1>
     <br>
+    <h1 class="centeredh1">Indicador6</h1>
     <br>
     <br>
     <br>
     <h1 class="centeredh1">Indicador6</h1>
 </div>
+
+<div class="fechaBD">
+<g:form action="index">
+        <label for="fecha">
+            <g:message code="alimentacion.fecha.label" default="Fecha Inicial" />
+        </label>
+        <g:datePicker name="fechaInicial" precision="day"  value="${fechaInicial}"  />
+
+
+        <label for="fecha">
+            <g:message code="alimentacion.fecha.label" default="Fecha Final" />
+        </label>
+        <g:datePicker name="fechaFinal" precision="day"  value="${fechaFinal}"  />
+
+
+
+        <g:submitButton name="create" class="save" value="Aceptar" />
+</g:form>
+</div>
+
+<h1>Partos: ${partosRangoFecha}</h1>
+<h1>Vivos: ${vivosNacimientos}</h1>
+<h1>Muertos: ${muertosNacimientos}</h1>
+<h1>Momias: ${momiasNacimientos}</h1>
+<h1>Total: ${totalNacimientos}</h1>
+<h1>Promedio cerdos vivos por parto: ${promedioCerdosParto}</h1>
 
 <div class="etapas">
     <div class="etapast">

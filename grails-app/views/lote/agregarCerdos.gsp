@@ -101,7 +101,7 @@
     </div>
 
     <div align="center">
-        <g:link class="btn btn-primary" action="index"> Finalizar </g:link>
+        <g:link class="btn btn-primary" action="finalizarNacimiento"> Finalizar </g:link>
     </div>
 
 </div>

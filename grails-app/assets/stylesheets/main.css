@@ -104,8 +104,8 @@ img {
 
 /* GENERAL */
 
-.box{
-
+.fechaBD{
+    margin: auto;
 }
 
 .etapas{
@@ -354,6 +354,10 @@ img {
 }
 
 /* CREATE/EDIT FORMS AND SHOW PAGES */
+
+.form-control {
+    height: 45px !important;
+}
 
 fieldset,
 .property-list {

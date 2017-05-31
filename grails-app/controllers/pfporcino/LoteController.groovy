@@ -68,6 +68,11 @@ class LoteController {
         [fecha: fecha, lote: lote, cerdoList: cerdoList, empleado: empleado, tituloEtapa: params.tituloEtapa]
     }
 
+    def finalizarNacimiento(){
+        flash.message = "¡Nacimiento registrado exitosamente!"
+        redirect(action: "etapas", controller: "lote")
+    }
+
     @Transactional
     def saveCerdos(){
         println("saveCerdos > params: " + params)
@@ -128,7 +133,7 @@ class LoteController {
                 nuevaEtapa.save flush:true
                 anteriorEtapa.save flush:true
                 flash.message = "¡Cambio de etapa correctamente registrado!"
-                redirect(action: "index")
+                redirect(action: "etapas")
             }
         }else{
             flash.message = "Este lote ya se encontraba en " + etapaCorrecta

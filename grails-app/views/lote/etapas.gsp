@@ -9,6 +9,9 @@
 
 <body>
 
+<g:if test="${flash.message}">
+    <div class="message" role="status">${flash.message}</div>
+</g:if>
 <div class="etapas">
     <div class="etapast">
         <a class="etapasc" href="${createLink(uri: '/lote/nacimiento')}"> <asset:image src="ICONS/1_nacimiento.png" alt="Grails"/> <span>NACIMIENTO</span></a>

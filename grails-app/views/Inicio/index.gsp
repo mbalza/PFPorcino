@@ -21,7 +21,7 @@
     <h1 class="centeredh1">Alimentación</h1>
 
     <div class="alert alert-success">
-        <asset:image src="ICONS/iconos_wos-24.png" alt="Grails"/> No hay alertas.
+        <asset:image src="ICONS/19_happy.png" alt="Grails"/> No hay alertas.
     </div>
 
 </div>
@@ -39,10 +39,14 @@
         <g:each in="${listaLoteVacunaFaltante}" status="i" var="vacunaFaltante">
             <div class="alert alert-danger">
                 <g:if test="${vacunaFaltante.numDiasPasados == 1}">
+                    <g:link action="create" controller="vacunaLote">
                     <asset:image src="ICONS/16_alertab.png" alt="Grails"/> <strong>ATRASADA: ${vacunaFaltante.vacuna}-${vacunaFaltante.numDiasPasados}día-${vacunaFaltante.lote}</strong>
+                    </g:link>
                 </g:if>
                 <g:else>
+                    <g:link action="create" controller="vacunaLote">
                     <asset:image src="ICONS/16_alertab.png" alt="Grails"/> <strong>ATRASADA: ${vacunaFaltante.vacuna}-${vacunaFaltante.numDiasPasados}días-${vacunaFaltante.lote}</strong>
+                    </g:link>
                 </g:else>
             </div>
         </g:each>
@@ -50,17 +54,17 @@
         <g:each in="${listaLoteVacunaFutura}" status="i" var="vacunaFutura">
             <g:if test="${vacunaFutura.numDiasFaltantes == 0}">
                 <div class="alert alert-warning">
-                    Hoy debe aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
+                    <asset:image src="ICONS/18_alerta.png" alt="Grails"/> Hoy aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
                 </div>
             </g:if>
             <g:elseif test="${vacunaFutura.numDiasFaltantes == 1}">
                 <div class="alert alert-info">
-                    Mañana debe aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
+                    <asset:image src="ICONS/18_infob.png" alt="Grails"/> Mañana aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
                 </div>
             </g:elseif>
             <g:else>
                 <div class="alert alert-info">
-                    Pasado mañana debe aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
+                    <asset:image src="ICONS/18_infob.png" alt="Grails"/> Pasado mañana aplicar <strong>${vacunaFutura.vacuna} - ${vacunaFutura.lote}</strong>
                 </div>
             </g:else>
         </g:each>
